@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #FAFAF8; -webkit-font-smoothing: antialiased; }
+</style>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif; color:#1C2B3A; font-size:16px; line-height:1.6;">
+
+  <!-- NAV -->
+  <div style="position:sticky; top:0; left:0; right:0; background:rgba(250,250,248,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #D0DDE8; z-index:100; padding:0 5vw; display:flex; align-items:center; justify-content:space-between; height:60px;">
+    <div style="font-family:'Fraunces',serif; font-weight:700; font-size:1.15rem; letter-spacing:-0.01em;">English<span style="color:#E8A44A;"> · </span>Riehen</div>
+    <div style="display:flex; align-items:center; gap:28px;">
+      <a href="#what" style="text-decoration:none; font-size:0.85rem; font-weight:500; color:#3D5166;">What we do</a>
+      <a href="#pricing" style="text-decoration:none; font-size:0.85rem; font-weight:500; color:#3D5166;">Pricing</a>
+      <a href="#contact" style="text-decoration:none; background:#1C2B3A; color:#FAFAF8; font-size:0.82rem; font-weight:600; padding:9px 18px; border-radius:6px;" style-hover="background:#E8A44A; color:#1C2B3A;">Book a trial →</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position:relative; overflow:hidden; background:#EAF2FB; padding:84px 5vw 72px;">
+    <div aria-hidden="true" style="position:absolute; right:-1.5vw; top:50%; transform:translateY(-50%); font-family:'Fraunces',serif; font-style:italic; font-weight:700; font-size:clamp(300px,42vw,540px); line-height:1; color:#C3DAF1; pointer-events:none; user-select:none; z-index:0;">A</div>
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto; display:flex; gap:40px; align-items:center; flex-wrap:wrap;">
+      <div style="flex:1 1 340px; min-width:300px;">
+        <div style="display:inline-flex; align-items:center; gap:10px; font-size:0.78rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#5E9181; margin-bottom:26px;">
+          <span style="display:block; width:28px; height:2px; background:#7BA99A; border-radius:2px;"></span>Native speaker · Riehen / Basel
+        </div>
+        <h1 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(2.6rem,5vw,4rem); line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px; text-wrap:balance;">Where children find their <em style="font-style:italic; font-weight:300; color:#E8A44A;">voice in English</em></h1>
+        <p style="font-size:1.08rem; color:#3D5166; max-width:480px; line-height:1.7; margin-bottom:40px;">Friendly, personalised tutoring for children aged 9–14. One-to-one or small groups — built around your child's confidence, not just their homework.</p>
+        <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+          <a href="#contact" style="text-decoration:none; background:#E8A44A; color:#1C2B3A; font-weight:600; font-size:0.95rem; padding:15px 30px; border-radius:8px; box-shadow:0 2px 14px rgba(232,164,74,0.35);" style-hover="box-shadow:0 6px 22px rgba(232,164,74,0.5);">Book a free trial session</a>
+          <a href="#how" style="text-decoration:none; color:#3D5166; font-size:0.92rem; font-weight:500; text-decoration-line:underline; text-underline-offset:3px; text-decoration-color:#B9CCDD;" style-hover="color:#1C2B3A;">How it works ↓</a>
+        </div>
+        <div style="margin-top:52px; padding-top:26px; border-top:1px solid #C8D9E6; display:flex; gap:14px 30px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:9px; font-size:0.82rem; color:#6C8399; font-weight:500;"><span style="width:7px; height:7px; border-radius:50%; background:#7BA99A;"></span>CHF 20–30 / session</div>
+          <div style="display:flex; align-items:center; gap:9px; font-size:0.82rem; color:#6C8399; font-weight:500;"><span style="width:7px; height:7px; border-radius:50%; background:#7BA99A;"></span>Ages 9–14</div>
+          <div style="display:flex; align-items:center; gap:9px; font-size:0.82rem; color:#6C8399; font-weight:500;"><span style="width:7px; height:7px; border-radius:50%; background:#7BA99A;"></span>Patient &amp; experienced</div>
+          <div style="display:flex; align-items:center; gap:9px; font-size:0.82rem; color:#6C8399; font-weight:500;"><span style="width:7px; height:7px; border-radius:50%; background:#7BA99A;"></span>Weekly, in term time</div>
+        </div>
+      </div>
+      <div style="flex:0 1 330px; min-width:260px; position:relative;">
+        <div style="position:absolute; top:-14px; left:-14px; right:22px; bottom:22px; border:1.5px solid #E8A44A; border-radius:18px; z-index:0;"></div>
+        <img src="https://images.unsplash.com/photo-1629360021730-3d258452c425?fm=jpg&q=80&w=1100&auto=format&fit=crop" alt="English tutor working one-to-one with a child at home in Riehen" style="position:relative; z-index:1; width:100%; height:460px; object-fit:cover; object-position:18% center; border-radius:18px; display:block; box-shadow:0 18px 44px rgba(28,43,58,0.18);">
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT I OFFER -->
+  <div id="what" style="background:#FAFAF8; padding:88px 5vw;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#6C8399; margin-bottom:16px;">What we work on</div>
+      <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.6rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px;">Support that goes beyond homework</h2>
+      <p style="font-size:1.02rem; color:#3D5166; max-width:560px; line-height:1.7; margin-bottom:48px;">Every child is different. Sessions are shaped around what your child actually needs — not a fixed syllabus.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1px; background:#D0DDE8; border:1px solid #D0DDE8; border-radius:14px; overflow:hidden;">
+        <div style="background:#FAFAF8; padding:30px 28px; display:flex; flex-direction:column; gap:14px;">
+          <div style="width:42px; height:42px; background:#FDF3E3; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#D08A2E;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><line x1="9" y1="8" x2="15" y2="8"></line><line x1="9" y1="12" x2="15" y2="12"></line><line x1="9" y1="16" x2="13" y2="16"></line></svg></div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.08rem; font-weight:600;">Homework support</h3>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.6;">Working through school assignments with guidance — not just the answers.</p>
+        </div>
+        <div style="background:#FAFAF8; padding:30px 28px; display:flex; flex-direction:column; gap:14px;">
+          <div style="width:42px; height:42px; background:#FDF3E3; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#D08A2E;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H10l-4 4V6a1 1 0 0 1 1-1z"></path></svg></div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.08rem; font-weight:600;">Speaking confidence</h3>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.6;">Real conversation practice in a safe, unhurried space.</p>
+        </div>
+        <div style="background:#FAFAF8; padding:30px 28px; display:flex; flex-direction:column; gap:14px;">
+          <div style="width:42px; height:42px; background:#FDF3E3; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#D08A2E;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1-4.2-1.5-6.2-1.5V18c2 0 4.6.5 6.2 1.5 1.6-1 4.2-1.5 6.2-1.5V4.5c-2 0-4.6.5-6.2 1.5z"></path><line x1="12" y1="6" x2="12" y2="19.5"></line></svg></div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.08rem; font-weight:600;">Reading &amp; vocabulary</h3>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.6;">Building a richer word bank through books and discussion.</p>
+        </div>
+        <div style="background:#FAFAF8; padding:30px 28px; display:flex; flex-direction:column; gap:14px;">
+          <div style="width:42px; height:42px; background:#FDF3E3; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#D08A2E;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4.2L15.5 5.3a1.8 1.8 0 0 1 2.5 0l.7.7a1.8 1.8 0 0 1 0 2.5L8.2 19z"></path><line x1="13.5" y1="7.3" x2="16.7" y2="10.5"></line></svg></div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.08rem; font-weight:600;">Grammar &amp; writing</h3>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.6;">Clear explanations, practised until they stick.</p>
+        </div>
+        <div style="background:#FAFAF8; padding:30px 28px; display:flex; flex-direction:column; gap:14px;">
+          <div style="width:42px; height:42px; background:#FDF3E3; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#D08A2E;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l1.9 4.3L18 10l-4.1 1.7L12 16l-1.9-4.3L6 10l4.1-1.7z"></path></svg></div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.08rem; font-weight:600;">Motivation &amp; self-belief</h3>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.6;">Helping children feel capable — the foundation everything builds on.</p>
+        </div>
+        <div style="background:#FAFAF8; padding:30px 28px; display:flex; flex-direction:column; gap:14px;">
+          <div style="width:42px; height:42px; background:#FDF3E3; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#D08A2E;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l5-5 3.2 3.2L20 6"></path><path d="M15.5 6H20v4.5"></path></svg></div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.08rem; font-weight:600;">Going beyond school</h3>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.6;">For children ready to stretch further than the curriculum allows.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" style="background:#1C2B3A; color:#FAFAF8; padding:88px 5vw;">
+    <div style="max-width:1080px; margin:0 auto; display:flex; gap:56px; align-items:stretch; flex-wrap:wrap;">
+      <div style="flex:1 1 320px; min-width:300px; position:relative; min-height:380px;">
+        <img src="https://images.unsplash.com/photo-1583468991267-3f068b607ae1?fm=jpg&q=80&w=1100&auto=format&fit=crop" alt="Tutor reading with a child in a calm, encouraging setting" style="width:100%; height:100%; min-height:380px; object-fit:cover; border-radius:16px; display:block;">
+        <div style="position:absolute; bottom:18px; left:18px; right:18px; background:rgba(28,43,58,0.78); backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:16px 18px;">
+          <div style="font-family:'Fraunces',serif; font-style:italic; font-size:1.02rem; color:#FAFAF8; line-height:1.4;">"Children learn best when they feel safe, encouraged, and not judged."</div>
+        </div>
+      </div>
+      <div style="flex:1.2 1 420px; min-width:320px;">
+        <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8FBDAE; margin-bottom:16px;">About me</div>
+        <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.5rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px; color:#FAFAF8;">A familiar face, not a formal tutor</h2>
+        <p style="font-size:1rem; color:rgba(250,250,248,0.72); max-width:560px; line-height:1.7; margin-bottom:32px;">I'm a native English speaker, local to Riehen and Basel, and a mother of two. I know what it takes for children to feel genuinely at ease with a new adult — and how much that matters for learning.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;">
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#8FBDAE; margin-bottom:10px;">Background</div>
+            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Experience as a <strong style="color:#FAFAF8; font-weight:600;">Tagesmutter</strong> and with <strong style="color:#FAFAF8; font-weight:600;">Basel Children's Trust</strong> — used to children of all ages and needs.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#8FBDAE; margin-bottom:10px;">My approach</div>
+            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Calm, patient and always kind. Mistakes are part of learning, never something to fear.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#8FBDAE; margin-bottom:10px;">The language</div>
+            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Natural rhythm, pronunciation and everyday vocabulary — the things textbooks can't replicate.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#8FBDAE; margin-bottom:10px;">After session one</div>
+            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Honest feedback on your child's level, strengths, and where a little focus helps most.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div id="pricing" style="background:#EAF2FB; padding:88px 5vw;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#6C8399; margin-bottom:16px;">Session options</div>
+      <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.6rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px;">Simple, fair pricing</h2>
+      <p style="font-size:1.02rem; color:#3D5166; max-width:560px; line-height:1.7; margin-bottom:48px;">45–60 minute sessions, during school weeks. No hidden costs.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; max-width:800px;">
+        <div style="background:#FDF3E3; border:1.5px solid #E8A44A; border-radius:16px; padding:36px 32px; position:relative;">
+          <div style="position:absolute; top:-12px; left:24px; background:#E8A44A; color:#1C2B3A; font-size:0.7rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 12px; border-radius:20px;">Most popular</div>
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#6C8399; margin-bottom:16px;">1:1 Tutoring</div>
+          <div style="font-family:'Fraunces',serif; font-size:2.9rem; font-weight:700; line-height:1; margin-bottom:5px;"><span style="font-size:1.2rem; font-weight:300; vertical-align:super;">CHF </span>30</div>
+          <div style="font-size:0.82rem; color:#6C8399; margin-bottom:24px;">per session · 45–60 min</div>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.65; padding-top:20px; border-top:1px solid #EAD3AE;">Focused, individual support tailored entirely to your child. Ideal when they need dedicated attention, structure, or a confidence boost.</p>
+        </div>
+        <div style="background:#FAFAF8; border:1px solid #D0DDE8; border-radius:16px; padding:36px 32px;">
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#6C8399; margin-bottom:16px;">Small Group</div>
+          <div style="font-family:'Fraunces',serif; font-size:2.9rem; font-weight:700; line-height:1; margin-bottom:5px;"><span style="font-size:1.2rem; font-weight:300; vertical-align:super;">CHF </span>20</div>
+          <div style="font-size:0.82rem; color:#6C8399; margin-bottom:24px;">per child · 45–60 min · groups of 2–3</div>
+          <p style="font-size:0.9rem; color:#3D5166; line-height:1.65; padding-top:20px; border-top:1px solid #D0DDE8;">Learning alongside one or two others. Great for children who enjoy company, practise better in a group, and feed off each other's energy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div id="how" style="background:#FAFAF8; padding:88px 5vw;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#6C8399; margin-bottom:16px;">The process</div>
+      <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.6rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px;">How we get started</h2>
+      <p style="font-size:1.02rem; color:#3D5166; max-width:560px; line-height:1.7; margin-bottom:52px;">No commitment until it feels right for your child.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:32px;">
+        <div>
+          <div style="width:56px; height:56px; border-radius:50%; background:#FDF3E3; border:2px solid #E8A44A; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:#D08A2E; margin-bottom:20px;">1</div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Trial session</h3>
+          <p style="font-size:0.88rem; color:#3D5166; line-height:1.65;">A first meeting to get to know your child — their level, personality, and what they find hard.</p>
+        </div>
+        <div>
+          <div style="width:56px; height:56px; border-radius:50%; background:#FAFAF8; border:2px solid #D0DDE8; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:#E8A44A; margin-bottom:20px;">2</div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Honest feedback</h3>
+          <p style="font-size:0.88rem; color:#3D5166; line-height:1.65;">I share what I observed: where they're confident, and where more support would help.</p>
+        </div>
+        <div>
+          <div style="width:56px; height:56px; border-radius:50%; background:#FAFAF8; border:2px solid #D0DDE8; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:#E8A44A; margin-bottom:20px;">3</div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Four weekly sessions</h3>
+          <p style="font-size:0.88rem; color:#3D5166; line-height:1.65;">If it's a good fit, we continue with a block of four — a proper, regular rhythm.</p>
+        </div>
+        <div>
+          <div style="width:56px; height:56px; border-radius:50%; background:#FAFAF8; border:2px solid #D0DDE8; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:#E8A44A; margin-bottom:20px;">4</div>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Growing confidence</h3>
+          <p style="font-size:0.88rem; color:#3D5166; line-height:1.65;">Over time, your child becomes more independent, comfortable, and capable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" style="background:#EEF5F3; padding:88px 5vw;">
+    <div style="max-width:1000px; margin:0 auto; display:flex; gap:64px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="flex:1 1 340px; min-width:300px;">
+        <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#6C8399; margin-bottom:16px;">Get in touch</div>
+        <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.6rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px;">Book a trial session</h2>
+        <p style="font-size:1.02rem; color:#3D5166; max-width:440px; line-height:1.7;">Tell me a little about your child and what you're looking for. I'll get back to you to discuss time slots and answer any questions.</p>
+        <p style="margin-top:20px; font-size:0.85rem; color:#6C8399; line-height:1.6;">Sessions run during school weeks in Riehen / Basel.<br>No sessions during school holidays or weekends.</p>
+        <div style="margin-top:28px; display:flex; flex-direction:column; gap:10px;">
+          <a href="#" style="text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-size:0.92rem; font-weight:500; color:#1C2B3A;"><span style="width:30px; height:30px; border-radius:8px; background:#fff; border:1px solid #D5E3DE; display:inline-flex; align-items:center; justify-content:center; color:#5E9181;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l8 5 8-5"></path><rect x="4" y="5" width="16" height="14" rx="2"></rect></svg></span><span class="__cf_email__" data-cfemail="b5ccdac0c798d0d8d4dcd9f5d0cdd4d8c5d9d09bd6dad8">[email&#160;protected]</span></a>
+          <a href="#" style="text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-size:0.92rem; font-weight:500; color:#1C2B3A;"><span style="width:30px; height:30px; border-radius:8px; background:#fff; border:1px solid #D5E3DE; display:inline-flex; align-items:center; justify-content:center; color:#5E9181;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2 1.5a11 11 0 0 0 5 5L19 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg></span>+41 00 000 00 00 · WhatsApp</a>
+        </div>
+      </div>
+      <div style="flex:1 1 380px; min-width:300px;">
+        <form onsubmit="{{ submit }}" style="display:flex; flex-direction:column; gap:16px; background:#fff; border:1px solid #D5E3DE; border-radius:16px; padding:28px;">
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.8rem; font-weight:600; color:#1C2B3A;">Your name</label>
+            <input type="text" placeholder="First and last name" style="border:1.5px solid #D0DDE8; border-radius:8px; padding:11px 14px; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1C2B3A; outline:none;" style-focus="border-color:#E8A44A;">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.8rem; font-weight:600; color:#1C2B3A;">Your email</label>
+            <input type="email" placeholder="you@example.com" style="border:1.5px solid #D0DDE8; border-radius:8px; padding:11px 14px; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1C2B3A; outline:none;" style-focus="border-color:#E8A44A;">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.8rem; font-weight:600; color:#1C2B3A;">Child's age</label>
+            <select style="border:1.5px solid #D0DDE8; border-radius:8px; padding:11px 14px; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1C2B3A; outline:none; background:#fff;" style-focus="border-color:#E8A44A;">
+              <option value="">Select age</option>
+              <option>9 years old</option>
+              <option>10 years old</option>
+              <option>11 years old</option>
+              <option>12 years old</option>
+              <option>13 years old</option>
+              <option>14 years old</option>
+            </select>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.8rem; font-weight:600; color:#1C2B3A;">What does your child need help with?</label>
+            <textarea placeholder="e.g. homework, speaking confidence, grammar — whatever feels most important" style="border:1.5px solid #D0DDE8; border-radius:8px; padding:11px 14px; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1C2B3A; outline:none; min-height:100px; resize:vertical;" style-focus="border-color:#E8A44A;"></textarea>
+          </div>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <button type="button" disabled="true" style="background:#7BA99A; color:#fff; border:none; border-radius:8px; padding:14px; font-family:'Inter',sans-serif; font-size:0.92rem; font-weight:600; margin-top:4px;">Message sent ✓</button>
+          </sc-if>
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <button type="submit" style="background:#1C2B3A; color:#FAFAF8; border:none; border-radius:8px; padding:14px; font-family:'Inter',sans-serif; font-size:0.92rem; font-weight:600; cursor:pointer; margin-top:4px;" style-hover="background:#E8A44A; color:#1C2B3A;">Send message →</button>
+          </sc-if>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#1C2B3A; color:rgba(250,250,248,0.55); text-align:center; padding:30px 5vw; font-size:0.82rem;">English Tutoring · <span style="color:#E8A44A;">Riehen / Basel</span> · Sessions during school term only</div>
+
+</div>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
