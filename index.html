@@ -243,12 +243,8 @@
             <label style="font-size:0.8rem; font-weight:600; color:#1C2B3A;">What does your child need help with?</label>
             <textarea name="message" placeholder="e.g. homework, speaking confidence, grammar — whatever feels most important" style="border:1.5px solid #D0DDE8; border-radius:8px; padding:11px 14px; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1C2B3A; outline:none; min-height:100px; resize:vertical;" style-focus="border-color:#E8A44A;"></textarea>
           </div>
-          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-            <button type="button" disabled="true" style="background:#7BA99A; color:#fff; border:none; border-radius:8px; padding:14px; font-family:'Inter',sans-serif; font-size:0.92rem; font-weight:600; margin-top:4px;">Message sent ✓</button>
-          </sc-if>
-          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-            <button type="submit" style="background:#1C2B3A; color:#FAFAF8; border:none; border-radius:8px; padding:14px; font-family:'Inter',sans-serif; font-size:0.92rem; font-weight:600; cursor:pointer; margin-top:4px;" style-hover="background:#E8A44A; color:#1C2B3A;">Send message →</button>
-          </sc-if>
+          <button type="submit" ref="{{ btnRef }}" style="background:#1C2B3A; color:#FAFAF8; border:none; border-radius:8px; padding:14px; font-family:'Inter',sans-serif; font-size:0.92rem; font-weight:600; cursor:pointer; margin-top:4px;" style-hover="background:#E8A44A; color:#1C2B3A;">Send message →</button>
+          <div ref="{{ okRef }}" style="display:none; background:#EAF5EE; border:1px solid #BFE3CE; color:#1C5B36; border-radius:8px; padding:14px; font-size:0.9rem; font-weight:600; text-align:center; margin-top:4px;">Message sent ✓ — thank you, I'll be in touch soon.</div>
         </form>
       </div>
     </div>
@@ -261,18 +257,20 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { sent: false };
   renderVals() {
     return {
-      sent: this.state.sent,
-      notSent: !this.state.sent,
+      btnRef: (el) => { this.btn = el; },
+      okRef: (el) => { this.ok = el; },
       submit: (e) => {
         e.preventDefault();
         const form = e.target;
         const body = new URLSearchParams(new FormData(form)).toString();
+        const done = () => {
+          if (this.ok) this.ok.style.display = 'block';
+          if (this.btn) this.btn.style.display = 'none';
+        };
         fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body })
-          .then(() => this.setState({ sent: true }))
-          .catch(() => this.setState({ sent: true }));
+          .then(done).catch(done);
       }
     };
   }
