@@ -27,11 +27,81 @@
   #contact-grid .c-info { grid-area:info; }
   #contact-grid .c-form { grid-area:form; }
   #contact-grid .c-wa { grid-area:wa; }
+  .about-top {
+    display:grid;
+    grid-template-columns:minmax(0,1.5fr) minmax(260px,0.8fr);
+    gap:64px;
+    align-items:center;
+    margin-bottom:38px;
+  }
+  .about-photo {
+    width:100%;
+    max-width:350px;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    border-radius:22px;
+    display:block;
+    justify-self:end;
+  }
+  .hero-section {
+    padding:84px 5vw 72px;
+  }
+  .hero-logo-wrap {
+    flex:0 1 390px;
+    min-width:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  .hero-logo {
+    width:min(100%,390px);
+    aspect-ratio:1 / 1;
+    object-fit:contain;
+    display:block;
+    border-radius:50%;
+    mix-blend-mode:multiply;
+    background:transparent;
+    box-shadow:none;
+  }
+  .hero-copy { order:1; }
+  .hero-logo-wrap { order:2; }
+  @media (max-width:900px) {
+    .about-top {
+      grid-template-columns:1fr;
+      gap:30px;
+    }
+    .about-photo {
+      max-width:320px;
+      justify-self:start;
+    }
+    .hero-section {
+      padding:64px 5vw 58px;
+    }
+    .hero-copy { order:2; }
+    .hero-logo-wrap { order:1; }
+    .hero-logo-wrap {
+      flex-basis:100%;
+      min-width:0;
+      margin-top:6px;
+    }
+    .hero-logo {
+      width:min(52vw,270px);
+    }
+  }
   @media (max-width:760px) {
     #contact-grid { grid-template-columns:1fr; grid-template-areas:"info" "form" "wa"; gap:28px; }
     .nav-text { display:none !important; }
     .c-wa .wa-btn { display:flex !important; justify-content:center; width:100%; }
     .c-wa { text-align:center; }
+    .about-photo { max-width:280px; justify-self:center; }
+    .hero-section { padding:48px 6vw 44px; }
+    .hero-logo { width:min(58vw,220px); }
+  }
+
+  @media (max-width:480px) {
+    .hero-section { padding:40px 6vw 38px; }
+    .hero-logo { width:min(55vw,190px); }
   }
 </style>
 </helmet>
@@ -49,10 +119,9 @@
   </div>
 
   <!-- HERO -->
-  <div style="position:relative; overflow:hidden; background:#EFE7D8; padding:84px 5vw 72px;">
-    <div aria-hidden="true" style="position:absolute; right:-1.5vw; top:50%; transform:translateY(-50%); font-family:'Fraunces',serif; font-style:italic; font-weight:700; font-size:clamp(300px,42vw,540px); line-height:1; color:#D9DEC6; pointer-events:none; user-select:none; z-index:0;">A</div>
+  <div class="hero-section" style="position:relative; overflow:hidden; background:#EFE7D8;">
     <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto; display:flex; gap:40px; align-items:center; flex-wrap:wrap;">
-      <div style="flex:1 1 340px; min-width:300px;">
+      <div class="hero-copy" style="flex:1 1 340px; min-width:300px;">
         <div style="display:inline-flex; align-items:center; gap:10px; font-size:0.78rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#7E9362; margin-bottom:26px;">NATIVE SPEAKER · RIEHEN</div>
         <h1 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(2.6rem,5vw,4rem); line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px; text-wrap:balance;">Where children find their <em style="font-style:italic; font-weight:300; color:#7E9362;">voice in English</em></h1>
         <p style="font-size:1.08rem; color:#48565F; max-width:480px; line-height:1.7; margin-bottom:40px;">Friendly, engaging and personalised tutoring for children aged 7–16. One-to-one or small groups built around your child's confidence, not just their homework.</p>
@@ -69,9 +138,13 @@
           <div style="display:flex; align-items:center; gap:9px; font-size:0.82rem; color:#74808A; font-weight:500;"><span style="width:7px; height:7px; border-radius:50%; background:#8C9C6E;"></span>Structured Phonics programme</div>
         </div>
       </div>
-      <div style="flex:0 1 330px; min-width:260px; position:relative;">
-        
-        
+      <div class="hero-logo-wrap">
+        <img
+          src="./images/logo.png"
+          alt="Riehen English Studio"
+          class="hero-logo"
+          decoding="async"
+        >
       </div>
     </div>
   </div>
@@ -120,27 +193,32 @@
   <!-- ABOUT -->
   <div id="about" style="background:#1C3A5E; color:#F5EFE4; padding:88px 5vw;">
     <div style="max-width:1080px; margin:0 auto;">
-      <div>
-        <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#A7B988; margin-bottom:16px;">About me</div>
-        <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.5rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px; color:#F5EFE4;">A familiar face, not a formal tutor</h2>
-        <p style="font-size:1rem; color:rgba(250,250,248,0.72); max-width:680px; line-height:1.7; margin-bottom:32px;">My name is Rosie. I am a native English speaker, local to Riehen and a mother of two. I know what it takes for children to feel genuinely at ease with a new adult and how much that matters for learning. Lessons are designed to be fun, interactive and encouraging, helping every child to feel comfortable, motivated and proud of their progress.</p>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
-            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">Background</div>
-            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Experienced as a <strong style="color: rgb(250, 250, 248); font-weight: 600;">Tagesmutter</strong> and my work with <strong style="color: rgb(250, 250, 248); font-weight: 600;" data-cc-id="cc-12">Basel Children's Trust</strong>, used to children of all ages and needs.</p>
-          </div>
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
-            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">My approach</div>
-            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Calm, patient and always kind. Mistakes are part of learning, never something to fear.</p>
-          </div>
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
-            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">The language</div>
-            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Natural rhythm, pronunciation and everyday vocabulary the things textbooks can't replicate.</p>
-          </div>
-          <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
-            <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">After session one</div>
-            <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Honest feedback on your child's level, strengths and where a little focus helps most.</p>
-          </div>
+      <div class="about-top">
+        <div>
+          <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#A7B988; margin-bottom:16px;">About me</div>
+          <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.5rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px; color:#F5EFE4;">A familiar face, not a formal tutor</h2>
+          <p style="font-size:1rem; color:rgba(250,250,248,0.72); max-width:680px; line-height:1.7;">My name is Rosie. I am a native English speaker, local to Riehen and a mother of two. I know what it takes for children to feel genuinely at ease with a new adult and how much that matters for learning. Lessons are designed to be fun, interactive and encouraging, helping every child to feel comfortable, motivated and proud of their progress.</p>
+        </div>
+        <div>
+          <img src="./images/profile_picture.png" alt="Rosie, English tutor in Riehen" class="about-photo" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+        <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+          <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">Background</div>
+          <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Experienced as a <strong style="color: rgb(250, 250, 248); font-weight: 600;">Tagesmutter</strong> and my work with <strong style="color: rgb(250, 250, 248); font-weight: 600;" data-cc-id="cc-12">Basel Children's Trust</strong>, used to children of all ages and needs.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+          <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">My approach</div>
+          <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Calm, patient and always kind. Mistakes are part of learning, never something to fear.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+          <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">The language</div>
+          <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Natural rhythm, pronunciation and everyday vocabulary the things textbooks can't replicate.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:22px;">
+          <div style="font-size:0.7rem; font-weight:600; letter-spacing:0.09em; text-transform:uppercase; color:#A7B988; margin-bottom:10px;">After session one</div>
+          <p style="font-size:0.88rem; color:rgba(250,250,248,0.75); line-height:1.6;">Honest feedback on your child's level, strengths and where a little focus helps most.</p>
         </div>
       </div>
     </div>
