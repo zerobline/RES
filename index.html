@@ -297,10 +297,9 @@
     width:100%;
   }
   .lesson-photo img {
-    width:auto;
+    width:100%;
     height:auto;
     max-width:100%;
-    object-fit:contain;
     display:block;
   }
   .lesson-card figcaption {
@@ -345,11 +344,8 @@
     white-space:nowrap;
     border:0;
   }
-  @media (min-width:760px) {
-    .lesson-grid { grid-template-columns:1fr 1fr; }
-    .lesson-card-wide { grid-column:1 / -1; }
-    .lesson-card-wide .lesson-photo img { max-height:400px; }
-    .lesson-card:not(.lesson-card-wide) .lesson-photo img { max-height:540px; }
+  @media (min-width:900px) {
+    .lesson-grid { grid-template-columns:repeat(3, minmax(0, 1fr)); gap:18px; }
   }
 </style>
 </helmet>
@@ -446,26 +442,25 @@
         <h3 class="lesson-heading">What lessons can involve</h3>
         <p class="lesson-lead">Games and materials from recent lessons.</p>
         <div class="lesson-grid">
-          <figure class="lesson-card lesson-card-wide">
+          <figure class="lesson-card">
             <div class="lesson-photo">
               <picture>
-                <source type="image/avif" srcset="./images/lesson-savannah-720.avif 720w, ./images/lesson-savannah-1440.avif 1440w" sizes="(max-width: 759px) 92vw, 720px">
-                <source type="image/webp" srcset="./images/lesson-savannah-720.webp 720w, ./images/lesson-savannah-1440.webp 1440w" sizes="(max-width: 759px) 92vw, 720px">
-                <img src="./images/lesson-savannah-1440.jpg" srcset="./images/lesson-savannah-720.jpg 720w, ./images/lesson-savannah-1440.jpg 1440w" sizes="(max-width: 759px) 92vw, 720px" width="1440" height="810" alt="Savannah rescue centre map with labelled animal picture cards" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="./images/lesson-together-720.avif 720w, ./images/lesson-together-1080.avif 1080w" sizes="(max-width: 899px) 92vw, 320px">
+                <source type="image/webp" srcset="./images/lesson-together-720.webp 720w, ./images/lesson-together-1080.webp 1080w" sizes="(max-width: 899px) 92vw, 320px">
+                <img src="./images/lesson-together-1080.jpg" srcset="./images/lesson-together-720.jpg 720w, ./images/lesson-together-1080.jpg 1080w" sizes="(max-width: 899px) 92vw, 320px" width="1080" height="1439" alt="Two children writing English work at a table, with notebooks and coloured pencils. A pink heart covers one child's face." loading="lazy" decoding="async">
               </picture>
             </div>
             <figcaption>
-              <h4>Savannah animal rescue</h4>
-              <p>Animal vocabulary and phonics, using the rescue-centre map and picture cards.</p>
-              <a href="https://www.instagram.com/riehenenglishstudio/p/De9pnPXCgpU/" target="_blank" rel="noopener noreferrer">See on Instagram<span class="visually-hidden">: Savannah animal rescue (opens in a new tab)</span></a>
+              <h4>Learning together</h4>
+              <p>Focused English activities and individual practice.</p>
             </figcaption>
           </figure>
           <figure class="lesson-card">
             <div class="lesson-photo">
               <picture>
-                <source type="image/avif" srcset="./images/lesson-writing-720.avif 720w, ./images/lesson-writing-1080.avif 1080w" sizes="(max-width: 759px) 92vw, 420px">
-                <source type="image/webp" srcset="./images/lesson-writing-720.webp 720w, ./images/lesson-writing-1080.webp 1080w" sizes="(max-width: 759px) 92vw, 420px">
-                <img src="./images/lesson-writing-1080.jpg" srcset="./images/lesson-writing-720.jpg 720w, ./images/lesson-writing-1080.jpg 1080w" sizes="(max-width: 759px) 92vw, 420px" width="1080" height="1440" alt="Letter-tracing sheet for animal names, with a cartoon ranger" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="./images/lesson-writing-720.avif 720w, ./images/lesson-writing-1080.avif 1080w" sizes="(max-width: 899px) 92vw, 320px">
+                <source type="image/webp" srcset="./images/lesson-writing-720.webp 720w, ./images/lesson-writing-1080.webp 1080w" sizes="(max-width: 899px) 92vw, 320px">
+                <img src="./images/lesson-writing-1080.jpg" srcset="./images/lesson-writing-720.jpg 720w, ./images/lesson-writing-1080.jpg 1080w" sizes="(max-width: 899px) 92vw, 320px" width="1080" height="1440" alt="Letter-tracing sheet for animal names, with a cartoon ranger" loading="lazy" decoding="async">
               </picture>
             </div>
             <figcaption>
@@ -477,15 +472,14 @@
           <figure class="lesson-card">
             <div class="lesson-photo">
               <picture>
-                <source type="image/avif" srcset="./images/lesson-detective-720.avif 720w, ./images/lesson-detective-1080.avif 1080w" sizes="(max-width: 759px) 92vw, 420px">
-                <source type="image/webp" srcset="./images/lesson-detective-720.webp 720w, ./images/lesson-detective-1080.webp 1080w" sizes="(max-width: 759px) 92vw, 420px">
-                <img src="./images/lesson-detective-1080.jpg" srcset="./images/lesson-detective-720.jpg 720w, ./images/lesson-detective-1080.jpg 1080w" sizes="(max-width: 759px) 92vw, 420px" width="1080" height="1440" alt="Museum detective sheet with a security timeline, floor maps and illustrated characters" loading="lazy" decoding="async">
+                <source type="image/avif" srcset="./images/lesson-space-720.avif 720w, ./images/lesson-space-1080.avif 1080w" sizes="(max-width: 899px) 92vw, 320px">
+                <source type="image/webp" srcset="./images/lesson-space-720.webp 720w, ./images/lesson-space-1080.webp 1080w" sizes="(max-width: 899px) 92vw, 320px">
+                <img src="./images/lesson-space-1080.jpg" srcset="./images/lesson-space-720.jpg 720w, ./images/lesson-space-1080.jpg 1080w" sizes="(max-width: 899px) 92vw, 320px" width="1080" height="1440" alt="Space picture cards for planet, rocket, moon and alien, with letter cards showing the sounds /p/, /l/, /a/ and /t/." loading="lazy" decoding="async">
               </picture>
             </div>
             <figcaption>
-              <h4>Detective challenges</h4>
-              <p>Following a security timeline, studying the museum map, interviewing witnesses and examining clues.</p>
-              <a href="https://www.instagram.com/riehenenglishstudio/p/DekXUP2ithl/" target="_blank" rel="noopener noreferrer">See on Instagram<span class="visually-hidden">: detective challenges (opens in a new tab)</span></a>
+              <h4>Space-themed phonics</h4>
+              <p>Picture cards and letter sounds.</p>
             </figcaption>
           </figure>
         </div>
