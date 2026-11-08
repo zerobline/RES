@@ -87,26 +87,27 @@
   }
   .hero-logo-wrap picture,
   .about-top picture { display:contents; }
-  #parents { position:relative; overflow:hidden; }
-  #parents > div { position:relative; z-index:1; }
+  #parents { overflow:hidden; }
+  .parents-stage { position:relative; }
   .parents-grid {
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:20px;
     align-items:stretch;
+    position:relative;
+    z-index:1;
   }
-  .parents-branch {
+  .parents-leaf {
     position:absolute;
     display:block;
-    width:240px;
-    height:78px;
     pointer-events:none;
-    z-index:0;
+    z-index:2;
   }
-  .parents-branch-tl { top:6px; left:10px; }
-  .parents-branch-tr { top:6px; right:10px; transform:scaleX(-1); }
-  .parents-branch-bl { bottom:6px; left:10px; transform:scaleY(-1); }
-  .parents-branch-br { bottom:6px; right:10px; transform:scale(-1); }
+  .parents-leaf-a { width:34px; height:52px; left:-26px; top:-6px; transform:rotate(-32deg); }
+  .parents-leaf-b { width:24px; height:38px; right:-18px; top:42px; transform:rotate(38deg); }
+  .parents-leaf-c { width:52px; height:30px; left:calc(50% - 26px); top:-36px; }
+  .parents-leaf-d { width:22px; height:34px; left:-16px; bottom:42px; transform:rotate(22deg); }
+  .parents-leaf-e { width:28px; height:44px; right:-20px; bottom:-8px; transform:rotate(-16deg); }
   .parents-card {
     background:#F5EFE4;
     border:1px solid #DED5C4;
@@ -155,11 +156,10 @@
   @media (max-width:760px) {
     .parents-grid { grid-template-columns:1fr; }
     .parents-card { padding:28px 22px; }
-    .parents-branch { width:168px; height:70px; }
-    .parents-branch-tl, .parents-branch-tr { top:4px; }
-    .parents-branch-bl, .parents-branch-br { bottom:4px; }
-    .parents-branch-tl, .parents-branch-bl { left:4px; }
-    .parents-branch-tr, .parents-branch-br { right:4px; }
+    .parents-leaf-a { left:4px; top:-30px; width:26px; height:40px; }
+    .parents-leaf-b { right:6px; top:-24px; width:20px; height:32px; }
+    .parents-leaf-c, .parents-leaf-d { display:none; }
+    .parents-leaf-e { right:12px; bottom:-26px; width:24px; height:36px; }
     .parents-card blockquote { font-size:1.05rem; }
   }
   .hero-copy { order:1; }
@@ -382,13 +382,15 @@
 
   <!-- PARENTS -->
   <div id="parents" style="background:#1C3A5E; padding:88px 5vw;">
-    <svg class="parents-branch parents-branch-tl" viewBox="0 0 260 96" aria-hidden="true" focusable="false"><path d="M6 74C40 72 72 62 112 52c42-11 86-24 142-32" fill="none" stroke="#6B7F52" stroke-width="1.5" stroke-linecap="round"/><g fill="#7E9362"><path transform="translate(34 58) rotate(-24)" d="M0 14C7 7 8-4 0-18C-8-4-7 7 0 14z"/><path transform="translate(104 44) rotate(-14)" d="M0 15C8 7 9-5 0-20C-9-5-8 7 0 15z"/><path transform="translate(186 30) rotate(-6)" d="M0 12C6 6 7-3 0-16C-7-3-6 6 0 12z"/></g><g fill="#8C9C6E"><path transform="translate(64 66) rotate(18)" d="M0 12C6 6 7-3 0-15C-7-3-6 6 0 12z"/><path transform="translate(146 50) rotate(12)" d="M0 13C7 6 8-4 0-17C-8-4-7 6 0 13z"/><path transform="translate(224 24) rotate(8)" d="M0 9C5 4 5-2 0-12C-5-2-5 4 0 9z"/></g><path transform="translate(248 16) rotate(4)" fill="#A7B988" d="M0 7C4 3 4-1 0-9C-4-1-4 3 0 7z"/></svg>
-    <svg class="parents-branch parents-branch-tr" viewBox="0 0 260 96" aria-hidden="true" focusable="false"><path d="M6 74C40 72 72 62 112 52c42-11 86-24 142-32" fill="none" stroke="#6B7F52" stroke-width="1.5" stroke-linecap="round"/><g fill="#7E9362"><path transform="translate(34 58) rotate(-24)" d="M0 14C7 7 8-4 0-18C-8-4-7 7 0 14z"/><path transform="translate(104 44) rotate(-14)" d="M0 15C8 7 9-5 0-20C-9-5-8 7 0 15z"/><path transform="translate(186 30) rotate(-6)" d="M0 12C6 6 7-3 0-16C-7-3-6 6 0 12z"/></g><g fill="#8C9C6E"><path transform="translate(64 66) rotate(18)" d="M0 12C6 6 7-3 0-15C-7-3-6 6 0 12z"/><path transform="translate(146 50) rotate(12)" d="M0 13C7 6 8-4 0-17C-8-4-7 6 0 13z"/><path transform="translate(224 24) rotate(8)" d="M0 9C5 4 5-2 0-12C-5-2-5 4 0 9z"/></g><path transform="translate(248 16) rotate(4)" fill="#A7B988" d="M0 7C4 3 4-1 0-9C-4-1-4 3 0 7z"/></svg>
-    <svg class="parents-branch parents-branch-bl" viewBox="0 0 260 96" aria-hidden="true" focusable="false"><path d="M6 74C40 72 72 62 112 52c42-11 86-24 142-32" fill="none" stroke="#6B7F52" stroke-width="1.5" stroke-linecap="round"/><g fill="#7E9362"><path transform="translate(34 58) rotate(-24)" d="M0 14C7 7 8-4 0-18C-8-4-7 7 0 14z"/><path transform="translate(104 44) rotate(-14)" d="M0 15C8 7 9-5 0-20C-9-5-8 7 0 15z"/><path transform="translate(186 30) rotate(-6)" d="M0 12C6 6 7-3 0-16C-7-3-6 6 0 12z"/></g><g fill="#8C9C6E"><path transform="translate(64 66) rotate(18)" d="M0 12C6 6 7-3 0-15C-7-3-6 6 0 12z"/><path transform="translate(146 50) rotate(12)" d="M0 13C7 6 8-4 0-17C-8-4-7 6 0 13z"/><path transform="translate(224 24) rotate(8)" d="M0 9C5 4 5-2 0-12C-5-2-5 4 0 9z"/></g><path transform="translate(248 16) rotate(4)" fill="#A7B988" d="M0 7C4 3 4-1 0-9C-4-1-4 3 0 7z"/></svg>
-    <svg class="parents-branch parents-branch-br" viewBox="0 0 260 96" aria-hidden="true" focusable="false"><path d="M6 74C40 72 72 62 112 52c42-11 86-24 142-32" fill="none" stroke="#6B7F52" stroke-width="1.5" stroke-linecap="round"/><g fill="#7E9362"><path transform="translate(34 58) rotate(-24)" d="M0 14C7 7 8-4 0-18C-8-4-7 7 0 14z"/><path transform="translate(104 44) rotate(-14)" d="M0 15C8 7 9-5 0-20C-9-5-8 7 0 15z"/><path transform="translate(186 30) rotate(-6)" d="M0 12C6 6 7-3 0-16C-7-3-6 6 0 12z"/></g><g fill="#8C9C6E"><path transform="translate(64 66) rotate(18)" d="M0 12C6 6 7-3 0-15C-7-3-6 6 0 12z"/><path transform="translate(146 50) rotate(12)" d="M0 13C7 6 8-4 0-17C-8-4-7 6 0 13z"/><path transform="translate(224 24) rotate(8)" d="M0 9C5 4 5-2 0-12C-5-2-5 4 0 9z"/></g><path transform="translate(248 16) rotate(4)" fill="#A7B988" d="M0 7C4 3 4-1 0-9C-4-1-4 3 0 7z"/></svg>
     <div style="max-width:1000px; margin:0 auto;">
       <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#A7B988; margin-bottom:16px;">Parents</div>
       <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.6rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:48px; color:#F5EFE4;">What parents say</h2>
+      <div class="parents-stage">
+        <svg class="parents-leaf parents-leaf-a" viewBox="0 0 40 64" aria-hidden="true" focusable="false"><path fill="#A7B988" d="M20 2C20 2 5 18 5 36c0 12 6.5 22 15 26 8.5-4 15-14 15-26C35 18 20 2 20 2z"/><path fill="none" stroke="#7E9362" stroke-width="1.5" stroke-linecap="round" d="M20 16v30"/></svg>
+        <svg class="parents-leaf parents-leaf-b" viewBox="0 0 40 64" aria-hidden="true" focusable="false"><path fill="#8C9C6E" d="M20 2C20 2 5 18 5 36c0 12 6.5 22 15 26 8.5-4 15-14 15-26C35 18 20 2 20 2z"/><path fill="none" stroke="#7E9362" stroke-width="1.5" stroke-linecap="round" d="M20 16v30"/></svg>
+        <svg class="parents-leaf parents-leaf-c" viewBox="0 0 64 36" aria-hidden="true" focusable="false"><path fill="#8C9C6E" d="M30 30C30 30 16 27 10 16 6 9 13 6 19 11c6 5 11 13 11 19z"/><path fill="#A7B988" d="M34 30C34 30 48 27 54 16 58 9 51 6 45 11c-6 5-11 13-11 19z"/></svg>
+        <svg class="parents-leaf parents-leaf-d" viewBox="0 0 40 64" aria-hidden="true" focusable="false"><path fill="#7E9362" d="M20 2C20 2 5 18 5 36c0 12 6.5 22 15 26 8.5-4 15-14 15-26C35 18 20 2 20 2z"/><path fill="none" stroke="#A7B988" stroke-width="1.4" stroke-linecap="round" d="M20 16v30"/></svg>
+        <svg class="parents-leaf parents-leaf-e" viewBox="0 0 40 64" aria-hidden="true" focusable="false"><path fill="#A7B988" d="M20 2C20 2 5 18 5 36c0 12 6.5 22 15 26 8.5-4 15-14 15-26C35 18 20 2 20 2z"/><path fill="none" stroke="#7E9362" stroke-width="1.5" stroke-linecap="round" d="M20 16v30"/></svg>
       <div class="parents-grid">
         <figure class="parents-card">
           <blockquote cite="https://www.instagram.com/riehenenglishstudio/p/DcbnYYOKPWE/">
@@ -408,6 +410,7 @@
             <a class="parents-source" href="https://www.instagram.com/stories/highlights/18111549452050344/" target="_blank" rel="noopener noreferrer">View the Instagram story highlight</a>
           </figcaption>
         </figure>
+      </div>
       </div>
     </div>
   </div>
