@@ -87,6 +87,62 @@
   }
   .hero-logo-wrap picture,
   .about-top picture { display:contents; }
+  .parents-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    align-items:stretch;
+  }
+  .parents-card {
+    background:#FFFFFF;
+    border:1px solid #DED5C4;
+    border-radius:16px;
+    padding:32px 28px;
+    box-shadow:0 4px 18px rgba(28,58,94,0.06);
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    margin:0;
+  }
+  .parents-card blockquote {
+    margin:0;
+    font-family:'Fraunces',serif;
+    font-weight:400;
+    font-style:italic;
+    font-size:1.12rem;
+    line-height:1.6;
+    color:#1C3A5E;
+  }
+  .parents-card blockquote p { margin:0; }
+  .parents-card figcaption {
+    margin-top:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .parents-name {
+    font-size:0.92rem;
+    font-weight:600;
+    color:#1C3A5E;
+  }
+  .parents-source {
+    color:#1C3A5E;
+    font-size:0.88rem;
+    font-weight:600;
+    text-decoration:underline;
+    text-underline-offset:3px;
+    border-radius:4px;
+  }
+  .parents-source:focus-visible {
+    outline:2px solid #1C3A5E;
+    outline-offset:3px;
+  }
+  @media (max-width:760px) {
+    .parents-grid { grid-template-columns:1fr; }
+    .parents-card { padding:28px 22px; }
+    .parents-card blockquote { font-size:1.05rem; }
+  }
   .hero-copy { order:1; }
   .hero-logo-wrap { order:2; }
   @media (max-width:900px) {
@@ -301,6 +357,34 @@
           <h3 style="font-family:'Fraunces',serif; font-size:1.1rem; font-weight:600; margin-bottom:8px;">Growing confidence</h3>
           <p style="font-size:0.88rem; color:#48565F; line-height:1.65;">Over time, your child becomes more independent, comfortable and capable.</p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARENTS -->
+  <div id="parents" style="background:#FFFDFA; padding:88px 5vw;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#74808A; margin-bottom:16px;">Parents</div>
+      <h2 style="font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.9rem,3.5vw,2.6rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:48px;">What parents say</h2>
+      <div class="parents-grid">
+        <figure class="parents-card">
+          <blockquote cite="https://www.instagram.com/riehenenglishstudio/p/DcbnYYOKPWE/">
+            <p>Rosie is exceptionally resourceful, creative, patient and positive, and has a wonderful ability to adapt her approach to each child’s age, personality and level.</p>
+          </blockquote>
+          <figcaption>
+            <span class="parents-name">Darina D.</span>
+            <a class="parents-source" href="https://www.instagram.com/riehenenglishstudio/p/DcbnYYOKPWE/" target="_blank" rel="noopener noreferrer">View the Instagram post</a>
+          </figcaption>
+        </figure>
+        <figure class="parents-card">
+          <blockquote cite="https://www.instagram.com/stories/highlights/18111549452050344/">
+            <p>Thank you, Rosie, for another interesting and inspiring lesson today! My daughter and her little brother absolutely love coming to your beautiful, calm studio. They enjoy having your full attention and a programme tailored to their individual interests so much. We are really happy to have found you! ❤️💚</p>
+          </blockquote>
+          <figcaption>
+            <span class="parents-name">Krystyna, Student’s Mum</span>
+            <a class="parents-source" href="https://www.instagram.com/stories/highlights/18111549452050344/" target="_blank" rel="noopener noreferrer">View the Instagram story highlight</a>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </div>
